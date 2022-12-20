@@ -7,6 +7,9 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NavBar from '../navBar/NavBar';
+import Map from '../../image/map.png';
+import Footer from '../footer/Footer';
+import Img1 from "../../image/img1.jpeg";
 const AboutPage = () => {
   const classes = useStyles();
   return (
@@ -16,7 +19,7 @@ const AboutPage = () => {
         <Typography align="center" variant="h4">
           About us
         </Typography>
-        <Typography>
+        <Typography className={classes.about}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Donec ut aliquam sem, eu ornare dolor. Fusce tempus, dui
           faucibus facilisis pulvinar, ex sem sodales ex, eu tempor
@@ -42,7 +45,7 @@ const AboutPage = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Typography>ZDJECIE</Typography>
+        <img src={Img1} className={classes.image}></img>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h3" className={classes.questions}>
@@ -113,7 +116,19 @@ const AboutPage = () => {
           </AccordionDetails>
         </Accordion>
       </Grid>
+      <Grid item xs={12} md={6} className={classes.contact}>
+        <Typography variant="h4" sx={{mt:"90px"}}>Skontaktuj się z nami!</Typography>
+        <Typography sx={{mt:"25px"}}>Crypocurrency</Typography>
+        <Typography>Aleja Armii Krajowej 21</Typography>
+        <Typography>42-202 Częstochowa</Typography>
+        <Typography>kontakt@crypocurrency.com</Typography>
+      </Grid>
+      <Grid item xs={12} md={6} >
+          <img src={Map} className={classes.map}></img>
+      </Grid>
+      <Footer></Footer>
     </Grid>
+   
   );
 };
 

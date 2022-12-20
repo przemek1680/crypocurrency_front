@@ -7,15 +7,18 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
   },
-  navbar: {
-    background: '#083359',
+  footer:{
+    minHeight:"60px",
+    background:"#012840"
   },
-  media: {
-    background: 'yellow',
+  copy:{
+    textAlign:"center",
+    color:"white"
   },
-  icons: {
-    marginTop: 30,
-    marginLeft: '30px',
-  },
+  icons:{
+    marginTop:15,
+    paddingRight:15,
+    paddingLeft:15
+  }
 }));
 export default useStyles;
