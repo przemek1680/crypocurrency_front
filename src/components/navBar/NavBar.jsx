@@ -2,31 +2,23 @@ import React, { useState, useEffect } from 'react';
 import useStyles from './NavBarStyles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Button } from '@mui/material';
 const NavBar = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.navbar}>
-      <Grid item xs={12} md={10}>
+      <Grid item xs={12} md={9}>
         <Typography variant="h1" className={classes.logo}>
           LOGO
         </Typography>
       </Grid>
-      <Grid item xs={12} md={2}>
-        <HomeIcon
-          sx={{ fontSize: 40 }}
-          className={classes.icons}
-        ></HomeIcon>
-        <InfoIcon
-          sx={{ fontSize: 40 }}
-          className={classes.icons}
-        ></InfoIcon>
-        <AccountCircleIcon
-          sx={{ fontSize: 40 }}
-          className={classes.icons}
-        ></AccountCircleIcon>
+      <Grid item xs={12} md={3}>
+      <Button sx={{ margin:"35px 0px 35px -40px", fontSize:19, textTransform:"none", fontWeight:"200", color: "#5F7DA0" }}
+        type="text" href={""} className={classes.buttons}>Home</Button>
+      <Button sx={{ margin:"35px 20px 35px 40px", fontSize:19, textTransform:"none", fontWeight:"300", color: "#5F7DA0" }} 
+        type="text" href={""} className={classes.buttons}>Wallet</Button>
+      <Button sx={{ margin:"35px 20px 35px 20px", fontSize:19, textTransform:"none", fontWeight:"300", color: "#5F7DA0" }} 
+        type="text" href={""} className={classes.buttons}>Contact</Button>
       </Grid>
     </Grid>
   );

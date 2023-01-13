@@ -1,6 +1,5 @@
 import { makeStyles } from '@mui/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { AlignHorizontalCenter } from '@mui/icons-material';
 const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
@@ -22,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   icons:{
     '&:hover': {
       color: '#DCDCFF',
+      transition: "0.2s linear"
     }
   }
 }));

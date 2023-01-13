@@ -11,11 +11,13 @@ const useStyles = makeStyles((theme) => ({
     background: '#06073F',
   },
   media: {
-    background: 'yellow',
+    background: '#DCDCFF'
   },
-  icons: {
-    marginTop: 30,
-    marginLeft: '30px',
+  buttons: {
+    '&:hover': {
+      color: '#DCDCFF',
+      transition: "0.2s linear"
+    }
   },
 }));
 export default useStyles;

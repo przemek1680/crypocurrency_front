@@ -6,7 +6,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { Button } from '@mui/material';
-import { Padding } from '@mui/icons-material';
 const NavBar = () => {
   const classes = useStyles();
   return (
@@ -14,7 +13,7 @@ const NavBar = () => {
       <Grid item xs={3}>
     </Grid>
       <Grid item xs={6} className={classes.copyrights}>
-        <Typography sx={{mt:"15px", fontSize:20, fontWeight:"medium", textTransform:"-moz-initial"}} >Cryptocus.com</Typography>
+        <Typography sx={{mt:"15px", fontSize:20, fontWeight:"medium", textTransform:"-moz-initial"}} >cryptounits.com</Typography>
         <Typography sx={{mt:"10px", mb:"40px", fontSize:16, fontWeight:"medium", textTransform:"-moz-initial"}} >© Copyrights</Typography>
       </Grid>
       <Grid item xs={3} className={classes.socials}>
