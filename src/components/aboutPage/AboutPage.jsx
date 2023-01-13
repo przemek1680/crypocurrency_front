@@ -15,11 +15,11 @@ const AboutPage = () => {
   return (
     <Grid container>
       <NavBar></NavBar>
-      <Grid item xs={12} md={6} className={classes.about}>
-        <Typography align="left" variant="h4">
-          About us
+      <Grid item xs={12} md={8} className={classes.about}>
+        <Typography sx={{margin: "0px 0px -10px 40px", align:"left"}} variant="h4" fontFamily={"MenschRegular"}>
+          About cryptounits.com
         </Typography>
-        <Typography className={classes.about}>
+        <Typography sx={{fontSize:18, fontFamily:"MenschRegular"}} className={classes.about}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Donec ut aliquam sem, eu ornare dolor. Fusce tempus, dui
           faucibus facilisis pulvinar, ex sem sodales ex, eu tempor
@@ -28,7 +28,7 @@ const AboutPage = () => {
           Integer iaculis nulla erat, et ultricies urna elementum
           cursus. Praesent quis mi varius, vulputate purus in,
           fermentum sem. Etiam mollis diam arcu, eu auctor tellus
-          cursus vel. Nunc tincidunt nisi nec efficitur bibendum.
+          cursus vel. Nunc tincidunt nisi nec efficitur bibendum.<p></p>
           Aenean posuere orci ac purus congue, et pulvinar enim
           cursus. Morbi fermentum sit amet felis eget scelerisque.
           Vestibulum eu justo est. In hac habitasse platea dictumst.
@@ -38,14 +38,16 @@ const AboutPage = () => {
           Proin ac leo enim. Integer elit augue, viverra sit amet mi
           sit amet, volutpat pretium augue. Duis non lacus purus.
           Maecenas et justo a mi posuere feugiat. Maecenas blandit
-          arcu ante, sed vehicula tortor lacinia sit amet. Suspendisse
+          arcu ante, sed vehicula tortor lacinia sit amet. <p></p>Suspendisse
           dignissim metus ligula, ut commodo nunc malesuada non.
           Suspendisse id nisi at est ultrices sagittis quis ut leo.
           Morbi nulla massa, tristique at porta non, semper sed ex.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec ut aliquam sem, eu ornare dolor.
         </Typography>
       </Grid>
-      <Grid item xs={12} md={6}>
-        <img src={Img1} className={classes.image}></img>
+      <Grid item xs={12} md={4}>
+      <img src={"/contact_image.PNG"} alt="Image" className={classes.image}/>
       </Grid>
       <Grid item xs={12}>
         <Typography variant="h3" className={classes.questions}>

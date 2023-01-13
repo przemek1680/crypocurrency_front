@@ -14,10 +14,10 @@ const NavBar = () => {
       <Button sx={{ margin:"35px 0px 35px -20px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#5F7DA0" }}
         type="text" href={""} className={classes.buttons}>Home</Button>
-      <Button sx={{ margin:"35px 20px 35px 40px", fontSize:20, textTransform:"none",
+      <Button sx={{ margin:"35px 20px 35px 30px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#5F7DA0" }} 
         type="text" href={""} className={classes.buttons}>Wallet</Button>
-      <Button sx={{ margin:"35px 20px 35px 20px", fontSize:20, textTransform:"none",
+      <Button sx={{ margin:"35px 20px 35px 10px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#5F7DA0" }} 
         type="text" href={""} className={classes.buttons}>Contact</Button>
       </Grid>

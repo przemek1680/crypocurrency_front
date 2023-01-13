@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
   },
   about: {
-    padding:"40px",
-    textAlign:"justify"
+    padding:"45px",
+    textAlign:"justify",
   },
   questions: {
     textAlign: 'center',
@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
     marginRight:"auto",
   },
   image:{
-    width:"93%",
+    width:"90%",
     height:"auto",
-    paddingTop:"20%",
+    paddingTop:"25%",
     marginLeft:"auto",
     marginRight:"auto"
   }

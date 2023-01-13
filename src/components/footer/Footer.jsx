@@ -18,13 +18,13 @@ const NavBar = () => {
       </Grid>
       <Grid item xs={3} className={classes.socials}>
         <Button sx={{mt:"30px" }} type="text" href={"https://www.facebook.com"}>
-          <FacebookIcon sx={{ fontSize:30 }} className={classes.icons} color="primary"></FacebookIcon >
+          <FacebookIcon sx={{ fontSize:30, color:"#5F7DA0" }} className={classes.icons}></FacebookIcon >
         </Button>
         <Button sx={{mt:"30px" }} type="text" href={"https://www.instagram.com"}>
-          <InstagramIcon sx={{ fontSize:30 }} className={classes.icons} color="primary"></InstagramIcon>
+          <InstagramIcon sx={{ fontSize:30, color:"#5F7DA0" }} className={classes.icons}></InstagramIcon>
         </Button>
         <Button sx={{mt:"30px" }} type="text" href={"https://www.twitter.com"}>
-          <TwitterIcon sx={{ fontSize:30 }} className={classes.icons} color="primary"></TwitterIcon>
+          <TwitterIcon sx={{ fontSize:30, color:"#5F7DA0" }} className={classes.icons}></TwitterIcon>
         </Button>
       </Grid>
     </Grid>
