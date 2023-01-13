@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react';
 import useStyles from './NavBarStyles';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { Button } from '@mui/material';
+import { AppBar, Button } from '@mui/material';
 const NavBar = () => {
   const classes = useStyles();
   return (
     <Grid container className={classes.navbar}>
       <Grid item xs={12} md={9}>
-        <Typography variant="h1" className={classes.logo}>
-          LOGO
-        </Typography>
+        <img className={classes.logo} src={"/logo.PNG"} alt="Logo"/>
       </Grid>
       <Grid item xs={12} md={3}>
       <Button sx={{ margin:"35px 0px 35px -40px", fontSize:19, textTransform:"none", fontWeight:"200", color: "#5F7DA0" }}

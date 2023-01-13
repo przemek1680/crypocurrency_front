@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     background: '#06073F',
   },
+  logo: {
+    margin: '-20px 0px -20px -10px',
+    scale: '0.6'
+  },
   media: {
     background: '#DCDCFF'
   },
