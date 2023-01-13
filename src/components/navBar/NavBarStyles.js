@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttons: {
     '&:hover': {
-      color: '#DCDCFF',
+      color: '#326096',
       transition: "0.2s linear"
     }
   },
