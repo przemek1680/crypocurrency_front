@@ -16,7 +16,7 @@ const AboutPage = () => {
     <Grid container>
       <NavBar></NavBar>
       <Grid item xs={12} md={6} className={classes.about}>
-        <Typography align="center" variant="h4">
+        <Typography align="left" variant="h4">
           About us
         </Typography>
         <Typography className={classes.about}>

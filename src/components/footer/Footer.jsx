@@ -13,8 +13,8 @@ const NavBar = () => {
       <Grid item xs={3}>
     </Grid>
       <Grid item xs={6} className={classes.copyrights}>
-        <Typography sx={{mt:"15px", fontSize:20, fontWeight:"medium", textTransform:"-moz-initial"}} >cryptounits.com</Typography>
-        <Typography sx={{mt:"10px", mb:"40px", fontSize:16, fontWeight:"medium", textTransform:"-moz-initial"}} >© Copyrights</Typography>
+        <Typography sx={{mt:"15px", fontSize:22, fontWeight:"medium", textTransform:"-moz-initial", fontFamily:"MenschRegular"}} >cryptounits.com</Typography>
+        <Typography sx={{mt:"10px", mb:"40px", fontSize:18, fontWeight:"medium", textTransform:"-moz-initial", fontFamily:"MenschRegular"}} >© Copyrights</Typography>
       </Grid>
       <Grid item xs={3} className={classes.socials}>
         <Button sx={{mt:"30px" }} type="text" href={"https://www.facebook.com"}>
