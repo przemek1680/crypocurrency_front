@@ -14,14 +14,22 @@ const useStyles = makeStyles((theme) => ({
     textAlign:"justify",
   },
   questions: {
-    textAlign: 'center',
-    paddingTop: '40px',
-    paddingBottom: '20px',
+    textAlign: 'left',
+    margin: '0px 0px 0px 0px',
+    paddingTop: '20px',
+    paddingLeft: '90px',
+    paddingRight: '90px',
+    paddingBottom: '60px',
+    background: '#F9F9F9'
+  },
+  questionsGrid: {
+    textAlign: 'left',
+    paddingTop: '20px',
+    paddingBottom: '40px'
   },
   contact:{
-    padding:"40px",
-    textAlign:"center",
-    lineHeight:"20px",
+    padding:"60px",
+    textAlign:"center"
   },
   map:{
     padding:"20px",
@@ -29,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     height:"auto",
     marginLeft:"auto",
     marginRight:"auto",
+    marginBottom:"20px"
   },
   image:{
     width:"90%",
