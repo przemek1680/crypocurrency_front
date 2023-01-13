@@ -5,20 +5,24 @@ const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: 'relative',
+    position: 'relative'
   },
   footer:{
-    minHeight:"60px",
-    background:"#012840"
+    minHeight:'80px',
+    background:'#06073F'
   },
-  copy:{
-    textAlign:"center",
-    color:"white"
+  copyrights:{
+    textAlign:'center',
+    color:'white'
+  },
+  socials:{
+    textAlign:'center',
+    color:'white'
   },
   icons:{
-    marginTop:15,
-    paddingRight:15,
-    paddingLeft:15
+    '&:hover': {
+      color: '#DCDCFF',
+    }
   }
 }));
 export default useStyles;

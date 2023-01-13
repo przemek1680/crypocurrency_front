@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
   },
   navbar: {
-    background: '#083359',
+    background: '#06073F',
   },
   media: {
     background: 'yellow',
