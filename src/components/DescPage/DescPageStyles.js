@@ -4,14 +4,20 @@ const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "fixed",    
+    display: "relative"    
   },
-  desc:{
+  introduction:{
+    padding:"25px",
     textAlign:"justify"
   },
   image:{
-    width:"100%",
-    height:"auto"
+    scale: "1.2",
+    width:"90%",
+    height:"auto",
+    paddingTop:"25%",
+    paddingLeft:"5%",
+    marginLeft:"auto",
+    marginRight:"auto"
   }
 }));
 export default useStyles;
