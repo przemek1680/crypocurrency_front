@@ -4,18 +4,18 @@ const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "relative"    
+    display: "relative"
   },
-  introduction:{
-    padding:"25px",
-    textAlign:"justify"
+  introduction: {
+    padding: "45px",
+    textAlign: "justify",
+    paddingBottom: "20px"
   },
-  image:{
+  image: {
     scale: "1.2",
     width:"90%",
     height:"auto",
-    paddingTop:"25%",
-    paddingLeft:"5%",
+    paddingTop:"35%",
     marginLeft:"auto",
     marginRight:"auto"
   }

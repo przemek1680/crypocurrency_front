@@ -8,7 +8,7 @@ const DescPage = () => {
   return (
     <Grid container>
       <Grid item xs={12} md={8} className={classes.introduction}>
-      <Typography sx={{margin: "-20px 0px 0px 20px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
+      <Typography sx={{margin: "0px 0px -10px 40px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
           Introduction
       </Typography>
       <Typography sx={{fontSize:18, fontFamily:"MenschRegular"}} className={classes.introduction}>
@@ -34,7 +34,9 @@ const DescPage = () => {
         Vestibulum sit amet elit vel metus elementum porttitor.
         Proin a euismod tellus. Etiam efficitur euismod sodales.
         Proin ac leo enim. Integer elit augue, viverra sit amet mi
-        sit amet, volutpat pretium augue.
+        sit amet, volutpat pretium augue. Aenean non nisl ut mi ultricies malesuada et at mauris. 
+        Suspendisse id magna vitae libero molestie pretium iaculis malesuada ligula. 
+        Quisque id tellus malesuada sapien sagittis faucibus.
       </Typography>
       </Grid>
       <Grid item xs={12} md={4} className={classes.introduction}>

@@ -23,15 +23,14 @@ const CryptoPage = () => {
   return (
     <Grid container item className={classes.main}>
       <Grid item xs={12}>
-      <Typography className={classes.title}>Aktualne kursy kryptowalut</Typography>
+      <Typography sx={{margin: "30px 50px 10px 85px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
+        Current cryptocurrency prices
+      </Typography>
       </Grid>
        {crypto
         .map((data, index)=>(
-          <Grid item xs={12} sm={4} md={3} key={index}>
-            <Box
-              display="flex"
-              justifyContent="space-around"
-            >
+          <Grid item xs={6} direction="column" key={index}>
+            <Box justifyContent = "space-around" display = "flex" alignItems = "center">
               <CryptoItem dane={data}></CryptoItem>
             </Box>
           </Grid>

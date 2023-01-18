@@ -4,11 +4,11 @@ const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: 'fixed'
+    position: "relative"
   },
   main: {
-    padding:"45px",
-    textAlign:"justify",
+    padding: "0px",
+    textAlign: "justify",
   },
  
 }));
