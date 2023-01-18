@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import MainPage from './components/mainPage/MainPage';
 import AboutPage from "./components/aboutPage/AboutPage";
+import LoginPage from "./components/loginPage/LoginPage";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainPage/>,
+},
+{
+  path: "/login",
+  element: <LoginPage/>,
 },
 ]);
 

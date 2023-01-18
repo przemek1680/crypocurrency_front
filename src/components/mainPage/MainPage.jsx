@@ -12,9 +12,9 @@ const MainPage = () => {
   const classes = useStyles();
 
   return (
-    <Grid container>
+    <Grid container item>
       <NavBar></NavBar>
-        <Grid container item xs={12} className={classes.main}>
+        <Grid item xs={12} className={classes.main}>
           <DescPage/>
           
           <CryptoPage/>
