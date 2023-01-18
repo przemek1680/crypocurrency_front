@@ -18,7 +18,7 @@ const CryptoItem = (props) => {
           <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "medium", letterSpacing: 3, color: "#B6C3D8"}} mt={1}>
             {data.CryptoAbbreviation}
           </Typography>
-          <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "normal"}} mt={1} mb={1}>
+          <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "bold"}} mt={1} mb={1}>
             {data.CryptoCurrentPrice} PLN
           </Typography>
         </Grid>
