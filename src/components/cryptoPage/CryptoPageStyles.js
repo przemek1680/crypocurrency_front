@@ -10,13 +10,13 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "450px",
     backgroundColor: "#F3F8FF",
     width: "100%",
-    paddingBottom: "60px"
+    paddingBottom: "80px"
   },
   crypto:{
     borderRadius: "20px",
     borderStyle: "solid",
-    borderColor: "06073F",
-    background: "#F7FAFF",
+    borderColor: "#D7E7FF",
+    background: "#FFFFFF",
     minHeight: "85px",
     padding: "8px 8px 8px 8px"
   },
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: "60px",
     padding: "25px",
     borderRadius: "20px",
+    borderColor: "#EAF2FF",
     borderStyle: "solid",
     '&:hover': {
       background: "#F1F4F9",
