@@ -24,7 +24,7 @@ const CryptoPage = () => {
     <Grid container item className={classes.main}>
       <Grid item xs={12}>
       <Typography sx={{margin: "30px 50px 10px 85px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
-        Current cryptocurrency prices
+        Current trending cryptocurrency prices
       </Typography>
       </Grid>
        {crypto

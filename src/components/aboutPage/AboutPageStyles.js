@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '90px',
     paddingRight: '90px',
     paddingBottom: '60px',
-    background: '#F3F8FF'
+    background: '#FBFDFF'
   },
   questionsGrid: {
     textAlign: 'left',

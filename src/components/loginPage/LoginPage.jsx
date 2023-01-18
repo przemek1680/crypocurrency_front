@@ -9,7 +9,9 @@ import TextField from '@mui/material/TextField';
 import Alert from '@mui/material/Alert';
 import Loader from '../loader/Loader';
 import { ErrorMessage } from '@hookform/error-message';
+import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
+
 const LoginPage = () => {
   const classes = useStyles();
   const { register, errors, handleSubmit } = useForm({
@@ -21,41 +23,45 @@ const LoginPage = () => {
     <Grid container item xs={12} className={classes.con} justify="center">
     <Container component="main">
     <div style={{
-        marginTop:'-250px',
+        marginTop:'-235px',
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translate(-50%, -50%)'
     }}>
-    <Grid item>
-            <img src={"https://upload.wikimedia.org/wikipedia/commons/9/95/OOjs_UI_icon_lock.svg"} style={{height: 60, width: 60}} alt="logo" className={classes.image}></img>
-        </Grid>
-      <Typography component="h1" variant="h5" sx={{textAlign:"center"}}>
-        Sign in to cryptounits
+      <Grid item>
+            <img src={"/small_logo.PNG"} style={{height: 70, width: 70}} alt="small logo" className={classes.image}></img>
+      </Grid>
+      <Typography component="h1" variant="h5" sx={{textAlign:"center", fontSize:28, fontFamily:"MenschRegular", marginTop:"30px"}}>
+        Sign in to cryptounits.com
       </Typography>
-      </div>
+    </div>
     <div style={{
         position: 'absolute', 
         left: '50%', 
         top: '50%',
         transform: 'translate(-50%, -50%)',
+        backgroundColor: '#FBFDFF',
         borderRadius: '25px',
+        borderWidth: '2px',
         borderStyle: 'solid',
+        borderColor: "#EAF2FF",
         padding:'15px'
     }}>
         
       <FormControl onSubmit={""}>
-        <form role="form" noValidate className={classes.form}>
-          <Grid container spacing={2}>
+        <form noValidate className={classes.form}>
+          <Grid container spacing={1} columnGap={2}>
             <Grid item xs={12}>
-            <TextField
+            <TextField 
                   variant="outlined"
                   margin="normal"
                   fullWidth
-                  id="userName"
+                  id="email"
                   defaultValue=""
-                  label='UserName'
-                  name="userName"
+                  label="E-mail Address"
+                  name="email"
+                  inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
                   {...register}
                 />
@@ -75,7 +81,7 @@ const LoginPage = () => {
             </Grid>
           </Grid>
           {error && <Alert severity="warning">Error</Alert>}
-          <Loader
+          <Loader sx = {{textTransform: "none", fontFamily: "MenschRegular", fontSize: 16, marginTop: "10px"}}
             type="submit"
             fullWidth
             variant="contained"
@@ -94,28 +100,43 @@ const LoginPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"160px",
+        marginTop:"180px",
         transform: 'translate(-50%, -50%)',
-        borderRadius: '20px',
+        backgroundColor: '#FBFDFF',
+        borderColor: "#EAF2FF",
+        borderWidth: '2px',
+        borderRadius: '15px',
         borderStyle: 'solid',
+        fontFamily:"MenschRegular",
+        fontSize: 16,
         padding:'15px'
     }}>
-         <Typography variant="h7" sx={{textAlign:"center"}}>
-        New to cryptounits? <a href="/" style={{ textDecoration: 'none' }}>Create an account</a>
-      </Typography>
-        </div>
-        <div style={{
+    <Typography variant="h7" sx={{textAlign:"center"}}>
+      New to cryptounits? <a href="/" className={classes.register}>Create an account</a>
+    </Typography>
+  </div>
+  
+  <div style={{
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"240px",
+        marginTop: "320px",
+        color: "#06073F",
         transform: 'translate(-50%, -50%)',
         padding:'15px'
     }}>
-        <a href="/" style={{ textDecoration: 'none', padding:'10px' }}>Terms</a>
-        <a href="/" style={{ textDecoration: 'none', padding:'10px' }}>Privacy</a>
-        <a href="/" style={{ textDecoration: 'none', padding:'10px' }}>Security</a>
-        <a href="/" style={{ textDecoration: 'none', padding:'10px' }}>Contact cryptounits</a>
+        <Button sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/about" className={classes.buttons}>Contact
+        </Button>
+        <Button disabled sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/" className={classes.buttons}>Terms
+        </Button>
+        <Button disabled sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/" className={classes.buttons}>Privacy
+        </Button>
+        <Button disabled sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/" className={classes.buttons}>Security
+        </Button>
     </div>
   </Grid>
   );

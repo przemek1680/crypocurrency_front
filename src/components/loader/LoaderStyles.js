@@ -4,7 +4,7 @@ const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
     wrapper: {
-        position: 'relative',
+        position: 'relative'
     },
     loader: {
         position: 'absolute',
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     button:{
         '&:hover': {
             color: '#326096',
-            transition: "0.2s linear"
+            transition: "0.4s linear"
           }
     }
 

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   main:{
     minHeight: "450px",
-    backgroundColor: "#F3F8FF",
+    backgroundColor: "#FBFDFF",
     width: "100%",
     paddingBottom: "80px"
   },
