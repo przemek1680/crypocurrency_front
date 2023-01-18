@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NavBar from '../navBar/NavBar';
 import Map from '../../image/map.png';
 import Footer from '../footer/Footer';
+
 const AboutPage = () => {
   const classes = useStyles();
   return (
@@ -160,8 +161,10 @@ const AboutPage = () => {
         <Typography sx={{fontFamily:"MenschRegular"}}>42-202 Czestochowa</Typography>
         <Typography sx={{fontFamily:"MenschRegular"}}>contact@cryptounits.com</Typography>
       </Grid>
-      <Grid item xs={12} md={5} >
-          <img src={Map} className={classes.map}></img>
+      <Grid item xs={12} md={5}>
+        <a target="_blank" href="https://goo.gl/maps/3GanaANvB4EKtznj8">
+          <img src={Map} alt="map" className={classes.map}></img>
+        </a>
       </Grid>
       <Footer></Footer>
     </Grid>
