@@ -4,6 +4,7 @@ import './App.css';
 import MainPage from './components/mainPage/MainPage';
 import AboutPage from "./components/aboutPage/AboutPage";
 import LoginPage from "./components/loginPage/LoginPage";
+import RegisterPage from "./components/registerPage/RegisterPage"
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 {
   path: "/login",
   element: <LoginPage/>,
+},
+{
+  path: "/register",
+  element: <RegisterPage/>,
 },
 ]);
 
