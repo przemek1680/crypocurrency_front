@@ -35,7 +35,7 @@ const RegisterPage = () => {
         transform: 'translate(-50%, -50%)'
     }}>
       <Grid item>
-            <img src={photo} style={{height: 70, width: 70}} alt="User picture" className={classes.image}></img>
+            <img src={photo} style={{height: 70, width: 70}} alt="user" className={classes.image}></img>
       </Grid>
       <Typography component="h1" variant="h5" sx={{textAlign:"center", fontSize:28, fontFamily:"MenschRegular", marginTop:"10px"}}>
         Sign up to cryptounits.com

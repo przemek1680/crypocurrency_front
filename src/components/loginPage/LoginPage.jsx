@@ -121,7 +121,6 @@ const LoginPage = () => {
         left: '50%', 
         top: '50%',
         marginTop: "320px",
-        color: "#06073F",
         transform: 'translate(-50%, -50%)',
         padding:'15px'
     }}>
