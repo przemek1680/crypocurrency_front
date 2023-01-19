@@ -126,6 +126,9 @@ const LoginPage = () => {
         padding:'15px'
     }}>
         <Button sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/" className={classes.buttons}>Home
+        </Button>
+        <Button sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
         fontWeight:"medium", color: "#06073F" }} type="text" href="/about" className={classes.buttons}>Contact
         </Button>
         <Button disabled sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
