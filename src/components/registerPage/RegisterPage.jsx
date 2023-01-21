@@ -82,6 +82,7 @@ const RegisterPage = () => {
                   name="firstname"
                   inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
+                  required
                   {...(register('firstname'))}
                 />
             </Grid>
@@ -96,6 +97,7 @@ const RegisterPage = () => {
                   name="lastname"
                   inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
+                  required
                   {...(register("lastname"))}
                 />
             </Grid>
@@ -106,7 +108,7 @@ const RegisterPage = () => {
                   id="image"
                   defaultValue=""
                   fullWidth
-                  label="Image"
+                  label="Image URL"
                   name="image"
                   inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
@@ -125,6 +127,7 @@ const RegisterPage = () => {
                   name="email"
                   inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
+                  required
                   {...(register('email'))}
                 />
             </Grid>
@@ -134,11 +137,12 @@ const RegisterPage = () => {
                   margin="normal"
                   fullWidth
                   defaultValue=""
-                  {...(register('password'))}
                   name="password"
                   label="Password"
                   type="password"
                   id="password"
+                  required
+                  {...(register('password'))}
                 />
             </Grid>
           </Grid>
@@ -151,7 +155,7 @@ const RegisterPage = () => {
             className={classes.submit}
             isLoading={isLoading}
           >
-            Sign in
+            Sign up
           </Loader>
         </form>
       </FormControl>
@@ -182,11 +186,14 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop: "480px",
+        marginTop: "560px",
         color: "#06073F",
         transform: 'translate(-50%, -50%)',
         padding:'15px'
     }}>
+        <Button sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
+        fontWeight:"medium", color: "#06073F" }} type="text" href="/" className={classes.buttons}>Home
+        </Button>
         <Button sx={{ fontSize:16, textTransform:"none", fontFamily:"MenschRegular", 
         fontWeight:"medium", color: "#06073F" }} type="text" href="/about" className={classes.buttons}>Contact
         </Button>

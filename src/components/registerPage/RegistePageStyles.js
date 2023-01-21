@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "5px"
   },
   register:{
+    color:"#326096",
     textDecoration: "none",
     '&:hover': {
       textDecoration: "underline"
