@@ -11,6 +11,7 @@ import Loader from '../loader/Loader';
 import { ErrorMessage } from '@hookform/error-message';
 import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
+import { userData } from '../../api/verifyClient';
 
 const LoginPage = () => {
   const classes = useStyles();
@@ -19,6 +20,18 @@ const LoginPage = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
+
+  async function verifyData(data) {
+    try {
+      const response = await userData(
+        data.email,
+        data.password
+      );
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
   return (
     <Grid container item xs={12} className={classes.con} justify="center">
     <Container component="main">
@@ -49,7 +62,7 @@ const LoginPage = () => {
         padding:'15px'
     }}>
         
-      <FormControl onSubmit={""}>
+      <FormControl onSubmit={handleSubmit(verifyData)}>
         <form noValidate className={classes.form}>
           <Grid container spacing={1} columnGap={2}>
             <Grid item xs={12}>
@@ -63,7 +76,8 @@ const LoginPage = () => {
                   name="email"
                   inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
                   autoFocus
-                  {...register}
+                  required
+                  {...register("email")}
                 />
             </Grid>
             <Grid item xs={12}>
@@ -72,11 +86,12 @@ const LoginPage = () => {
                   margin="normal"
                   fullWidth
                   defaultValue=""
-                  {...register}
                   name="password"
                   label="Password"
                   type="password"
                   id="password"
+                  required
+                  {...register("password")}
                 />
             </Grid>
           </Grid>
