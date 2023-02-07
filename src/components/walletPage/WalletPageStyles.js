@@ -1,50 +1,35 @@
 import { makeStyles } from '@mui/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
-import { areOptionsEqual } from '@mui/base';
-
 const theme = createTheme();
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: 'relative',
+    display: "relative"
   },
-  about: {
-    padding:"45px",
-    textAlign:"justify",
+  main:{
+    minHeight: "450px",
+    backgroundColor: "#FBFDFF",
+    width: "100%",
+    paddingBottom: "80px"
   },
-  questions: {
-    textAlign: 'left',
-    margin: '0px 0px 0px 0px',
-    paddingTop: '20px',
-    paddingLeft: '90px',
-    paddingRight: '90px',
-    paddingBottom: '60px',
-    background: '#FBFDFF'
-  },
-  questionsGrid: {
-    textAlign: 'left',
-    paddingTop: '20px',
-    paddingBottom: '40px'
-  },
-  contact:{
-    padding:"60px",
-    textAlign:"center"
-  },
-  map:{
-    padding:"20px",
-    width:"93%",
-    height:"auto",
-    marginLeft:"auto",
-    marginRight:"auto",
-    marginBottom:"20px"
+  crypto:{
+    borderRadius: "20px",
+    borderStyle: "solid",
+    borderColor: "#D7E7FF",
+    background: "#FFFFFF",
+    minHeight: "85px",
+    padding: "8px 8px 8px 8px"
   },
   image:{
-    width:"90%",
-    height:"auto",
-    paddingTop:"25%",
-    marginLeft:"auto",
-    marginRight:"auto"
+    width: "60px",
+    padding: "25px",
+    borderRadius: "20px",
+    borderColor: "#EAF2FF",
+    borderStyle: "solid",
+    '&:hover': {
+      background: "#F1F4F9",
+      transition: "0.5s linear"
+    }
   }
 }));
 export default useStyles;
