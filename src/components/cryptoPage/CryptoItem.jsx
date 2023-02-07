@@ -7,7 +7,7 @@ const CryptoItem = (props) => {
   const classes = useStyles();
   const data = props.dane;
   return (
-    <Grid container item xs={12} md={10} spacing={0} mt={3} className={classes.crypto}>
+    <Grid container item xs={12} md={11} spacing={0} mt={3} className={classes.crypto}>
         <Grid item xs={3}>
             <img src={data.CryptoIcon} style={{height: 60, width: 60}} alt="crypto logo" className={classes.image}></img>
         </Grid>
