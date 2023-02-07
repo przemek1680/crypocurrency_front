@@ -26,7 +26,7 @@ const WalletItem = (props) => {
         <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "bold", fontFamily:"MenschRegular"}} mt={1} mb={1} display="inline" marginRight="2%">
           Balance {cryptoAmmount} {data.CryptoAbbreviation}
         </Typography>
-        <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "bold", fontFamily:"MenschRegular"}} mt={1} mb={1} display="inline">
+        <Typography sx={{fontSize: 18, fontSmooth: 50, fontWeight: "bold", fontFamily:"MenschRegular", color: "#B6C3D8"}} mt={1} mb={1} display="inline">
           {(cryptoAmmount * data.CryptoCurrentPrice).toFixed(2)} PLN
         </Typography>
       </Grid>
