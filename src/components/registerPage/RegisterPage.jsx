@@ -40,7 +40,7 @@ const RegisterPage = () => {
     <Grid container item xs={12} className={classes.con} justify="center">
     <Container component="main">
     <div style={{
-        marginTop:'-260px',
+        marginTop:'-270px',
         position: 'absolute', 
         left: '50%', 
         top: '50%',
@@ -57,7 +57,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"100px",
+        marginTop:"90px",
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FBFDFF',
         borderRadius: '25px',
@@ -166,7 +166,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"420px",
+        marginTop:"410px",
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FBFDFF',
         borderColor: "#EAF2FF",
@@ -186,7 +186,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop: "560px",
+        marginTop: "530px",
         color: "#06073F",
         transform: 'translate(-50%, -50%)',
         padding:'15px'
