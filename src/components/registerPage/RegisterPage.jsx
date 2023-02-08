@@ -184,7 +184,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"420px",
+        marginTop:"440px",
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FBFDFF',
         borderColor: "#EAF2FF",
