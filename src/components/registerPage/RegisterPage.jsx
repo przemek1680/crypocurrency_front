@@ -17,11 +17,13 @@ const RegisterPage = () => {
   const classes = useStyles();
   const [photo, setPhoto] = useState("https://media.istockphoto.com/id/1223671392/vector/default-profile-picture-avatar-photo-placeholder-vector-illustration.jpg?s=612x612&w=0&k=20&c=s0aTdmT5aU6b8ot7VKm11DeID6NctRCpB755rA1BIP0=")
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
+  const [stat, setStat] = useState(false);
+  const [mess,setMess] = useState("");
   const handleChange = event => {
     setPhoto(event.target.value);
   }
   async function addUser(data){
+    setStat(true);
     try{
     const response = await newUser(
       data.firstname,
@@ -30,9 +32,20 @@ const RegisterPage = () => {
       data.image,
       data.password
     );
+    setIsLoading(true);
+    setMess("Konto utworzone pomyślnie!");
     } catch(error){
-      console.log(error);
+      console.log(error.response.status);
+      if(error.response.status == 409)
+      {
+        setMess("Adres email jest zajęty");
+      }
+      else{
+        setMess("Błąd podczas tworzenia konta");
+      }
+      
     }
+    setIsLoading(false);
   }
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -40,7 +53,7 @@ const RegisterPage = () => {
     <Grid container item xs={12} className={classes.con} justify="center">
     <Container component="main">
     <div style={{
-        marginTop:'-270px',
+        marginTop:'-260px',
         position: 'absolute', 
         left: '50%', 
         top: '50%',
@@ -52,12 +65,17 @@ const RegisterPage = () => {
       <Typography component="h1" variant="h5" sx={{textAlign:"center", fontSize:28, fontFamily:"MenschRegular", marginTop:"10px"}}>
         Sign up to cryptounits.com
       </Typography>
+      {stat ? (
+          <Typography component="h1" variant="h7" sx={{textAlign:"center", fontSize:16, fontFamily:"MenschRegular", marginTop:"10px"}}>{mess}</Typography>
+        ) : (
+          <Typography></Typography>
+        )}
     </div>
     <div style={{
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"90px",
+        marginTop:"130px",
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FBFDFF',
         borderRadius: '25px',
@@ -166,7 +184,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop:"410px",
+        marginTop:"420px",
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FBFDFF',
         borderColor: "#EAF2FF",
@@ -186,7 +204,7 @@ const RegisterPage = () => {
         position: 'absolute', 
         left: '50%', 
         top: '50%',
-        marginTop: "530px",
+        marginTop: "560px",
         color: "#06073F",
         transform: 'translate(-50%, -50%)',
         padding:'15px'
