@@ -16,10 +16,10 @@ const NavBar = () => {
         type="text" href={"/"} className={classes.buttons}>Home</Button>
       <Button sx={{ margin:"35px 30px 35px 50px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#FFFFFF" }} 
-        type="text" href={""} className={classes.buttons}>Wallet</Button>
+        type="text" href={"/wallet"} className={classes.buttons}>Wallet</Button>
       <Button sx={{ margin:"35px 40px 35px 20px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#FFFFFF" }} 
-        type="text" href={"About"} className={classes.buttons}>Contact</Button>
+        type="text" href={"/about"} className={classes.buttons}>Contact</Button>
          <Button sx={{ margin:"35px 30px 35px 5px", fontSize:20, textTransform:"none",
         fontFamily:"MenschRegular", fontWeight:"medium", color: "#FFFFFF" }}
         type="text" href={"/login"} className={classes.buttons}>Sign in</Button>
