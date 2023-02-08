@@ -14,10 +14,13 @@ import DescPage from "../DescPage/DescPage";
 import {cryptoDetails} from "../../api/cryptoClient";
 import WalletItem from '../walletPage/WalletItem';
 import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const WalletPage = () => {
   const classes = useStyles();
   const [crypto, setCrypto] = useState([]);
+
+  const [selectedCrypto, setSelectedCrypto] = useState("");
 
   async function fetchDetails(){
     const response = await cryptoDetails();
@@ -34,22 +37,43 @@ const WalletPage = () => {
     <Grid container item>
       <NavBar></NavBar>
         <Grid item xs={12} className={classes.main}>
-        <Grid container item className={classes.main}>
-          <Grid item xs={12}>
-            <Typography sx={{margin: "30px 50px 10px 85px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
-              Portfolio
-            </Typography>
-          </Grid>
-          {crypto
-            .map((data, index)=>(
-              <Grid item xs={12} direction="column" key={index}>
-                <Box justifyContent = "space-around" display = "flex" alignItems = "center">
-                  <WalletItem dane={data}></WalletItem>
-                </Box>
+          <Grid container item className={classes.main}>
+            <Grid item xs={12}>
+              <Typography sx={{margin: "30px 50px 10px 85px", align:"left", fontFamily:"MenschRegular"}} variant="h4" >
+                Portfolio
+              </Typography>
+              <Grid xs={11} marginX="5%">
+                <TextField
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                        id="selectedCrypto"
+                        
+                        defaultValue=""
+                        label="Search for crypto"
+                        name="selectedCrypto"
+                        inputProps={{ style: { fontFamily:"MenschRegular", fontSize: 18, color: "black" } }}
+                        autoFocus
+                        onChange={(e) => {
+                                 setSelectedCrypto(e.target.value)
+                               }}
+                      />
               </Grid>
-            ))
-            .reverse()}
-        </Grid>
+            </Grid>
+            {crypto
+              .filter(function (element) {
+                if (!selectedCrypto) return true;
+                return element.CryptoName.toLowerCase().includes(selectedCrypto.toLowerCase());
+              })
+              .map((data, index)=>(
+                <Grid item xs={12} direction="column" key={index}>
+                  <Box justifyContent = "space-around" display = "flex" alignItems = "center">
+                    <WalletItem dane={data}></WalletItem>
+                  </Box>
+                </Grid>
+              ))
+              .reverse()}
+          </Grid>
         </Grid>
       <Footer></Footer>
     </Grid>
