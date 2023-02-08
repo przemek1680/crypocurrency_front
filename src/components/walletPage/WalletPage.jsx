@@ -60,19 +60,21 @@ const WalletPage = () => {
                       />
               </Grid>
             </Grid>
-            {crypto
-              .filter(function (element) {
-                if (!selectedCrypto) return true;
-                return element.CryptoName.toLowerCase().includes(selectedCrypto.toLowerCase());
-              })
-              .map((data, index)=>(
-                <Grid item xs={12} direction="column" key={index}>
-                  <Box justifyContent = "space-around" display = "flex" alignItems = "center">
-                    <WalletItem dane={data}></WalletItem>
-                  </Box>
-                </Grid>
-              ))
-              .reverse()}
+            <Grid container style={{maxHeight: '55vh', overflow: 'auto'}}>
+              {crypto
+                .filter(function (element) {
+                  if (!selectedCrypto) return true;
+                  return element.CryptoName.toLowerCase().includes(selectedCrypto.toLowerCase());
+                })
+                .map((data, index)=>(
+                  <Grid item xs={12} direction="column" key={index}>
+                    <Box justifyContent = "space-around" display = "flex" alignItems = "center">
+                      <WalletItem dane={data}></WalletItem>
+                    </Box>
+                  </Grid>
+                ))
+                .reverse()}
+            </Grid>
           </Grid>
         </Grid>
       <Footer></Footer>
